@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Jocul "Minte-mă frumos"</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/trimite-mesaj">Minciuni</a></li>
+          <li><a href="/mesaje-primite">Povesti</a></li>
+          <li><a href="/adevarate">Adevăruri</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Adauga povesti adevarate</h1>
+        <form action="/trimite-mesaj" method="POST">
+          <% if (error) { %>
+          <script>
+            window.alert("<%= error %>");
+          </script>
+          <% } %>
+          <input
+            type="text"
+            name="destinatar"
+            placeholder="Introdu numele tau"
+            required
+          />
+          <textarea
+            name="mesaj"
+            placeholder="Povestea ta adevarata"
+            required
+          ></textarea>
+          <input type="submit" value="Trimite" />
+        </form>
+      </main>
+    </div>
+    <footer>
+      <a href="/regulament">Regulament</a>
+      <a href="/joc">Login</a>
+    </footer>
+  </body>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Jocul "Minte-mă frumos"</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/trimite-mesaj">Minciuni</a></li>
+          <li><a href="/mesaje-primite">Povesti</a></li>
+          <li><a href="/adevarate">Adevăruri</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Minte-mă frumos</h1>
+      <% if (typeof error !== "undefined") { %>
+      <script>
+        alert("Utilizatorul este deja existent.");
+      </script>
+      <% } %>
+      <form action="/joc" method="POST">
+        <input
+          type="text"
+          name="username"
+          placeholder="Introdu numele de utilizator"
+          required
+        />
+        <input type="submit" value="Start joc" />
+      </form>
+    </main>
+    <footer>
+      <a href="/regulament">Regulament</a>
+      <a href="/joc">Login</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Jocul "Minte-mă frumos"</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/trimite-mesaj">Minciuni</a></li>
+          <li><a href="/mesaje-primite">Povesti</a></li>
+          <li><a href="/adevarate">Adevăruri</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <main>
+        <h1>Reguli</h1>
+        <div>
+          <ul>
+            <li>
+              Toti jucatorii trebuie sa isi creeze un
+              <a href="/joc">username</a>
+            </li>
+            <li>
+              Se formeaza 2 echipe egale, urmand ca jucatorii sa adauge cate o
+              poveste falsa fiecarui coechipier.
+            </li>
+            <li>
+              Pe pagina <a href="/trimite-mesaj">Minciuni</a> jucatorul
+              introduce pe rand numele fiecarui coechipier si adauga o poveste
+              falsa despre acesta, la persoana I
+            </li>
+            <li>
+              Pe pagina <a href="/adevarate">Adevăruri</a> jucatorul introduce
+              un numar de povesti adevarate egal cu numarul de coechipieri.
+              (Spre exemplu, daca intr-o echipa sunt 6 jucatori, fiecare va
+              introduce 5 povesti adevarate)
+            </li>
+            <li>
+              Dupa ce au introdus povestile, jucatorii intra pe pagina
+              <a href="/mesaje-primite">Povesti</a> si in functie de ordinea
+              lor, genereaza o poveste random care poate fi adevarata sau falsa
+            </li>
+            <li>
+              Fiecare jucator are la dispozitie 1 minut sa se gandeasca la
+              poveste din momentul in care a generat-o
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <a href="/regulament">Regulament</a>
+      <a href="/joc">Login</a>
+    </footer>
+  </body>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</html>

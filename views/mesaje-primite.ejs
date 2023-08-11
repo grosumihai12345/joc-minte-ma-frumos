@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mesaje primite</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/trimite-mesaj">Minciuni</a></li>
+          <li><a href="/mesaje-primite">Povesti</a></li>
+          <li><a href="/adevarate">Adevăruri</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Mesaje primite</h1>
+      <% if (mesaj) { %>
+      <div class="message-container">
+        <p><strong>Mesaj:</strong> <%= mesaj %></p>
+      </div>
+      <% } %> <% if (user.mesaje.length > 0) { %>
+      <a href="/genereaza-mesaj-random" class="button"
+        >Generează un mesaj random</a
+      >
+      <div class="timer-container">
+        <span id="timer">01:00</span>
+      </div>
+      <% } %>
+    </main>
+
+    <footer>
+      <a href="/regulament">Regulament</a>
+      <a href="/joc">Login</a>
+    </footer>
+    <script>
+      // JavaScript pentru gestionarea timerului
+      const timerElement = document.getElementById("timer");
+
+      function startTimer(duration, display) {
+        let timer = duration,
+          minutes,
+          seconds;
+        setInterval(function () {
+          minutes = parseInt(timer / 60, 10);
+          seconds = parseInt(timer % 60, 10);
+
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          display.textContent = minutes + ":" + seconds;
+
+          if (--timer < 0) {
+            timer = duration;
+          }
+        }, 1000);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const oneMinute = 60,
+          display = timerElement;
+
+        startTimer(oneMinute, display);
+      });
+    </script>
+  </body>
+</html>
